@@ -22,6 +22,14 @@ export default function Home() {
     };
   }, []);
 
+  function handleDoar() {
+    if (logado){
+      window.location.href = "/etapa-selecao";
+    } else {
+    window.location.href = "/login";};
+    return;
+  }
+
   function handleLogout() {
     sessionStorage.removeItem("token");
     setLogado(false);
@@ -163,7 +171,7 @@ export default function Home() {
         <p>Junte-se a nós e fortaleça todo o nosso terceiro setor, conectando doadores, ONGs e estabelecimentos.</p>
         <button
           className="donate-button"
-          onClick={() => window.location.href = "/etapa-selecao"}
+          onClick={() => handleDoar()}
         >
           Comece a Doar &rarr;
         </button>

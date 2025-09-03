@@ -49,7 +49,7 @@ export default function RegisterPage() {
         setSucesso("Cadastro realizado com sucesso!");
         setTimeout(() => {
           window.location.href = "/login";
-        }, 2000);
+        }, 200);
       } else {
         setErro(resposta?.mensagem || "Erro ao cadastrar.");
       }

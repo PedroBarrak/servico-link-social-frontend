@@ -35,6 +35,8 @@ export default function Usuario() {
     window.location.href = "/login";
   };
 
+
+
   if (loading) return <p>Carregando dados...</p>;
   if (error) return <p className="error">{error}</p>;
   if (!dados) return <p>Dados do usuário não disponíveis</p>;
@@ -43,7 +45,7 @@ export default function Usuario() {
     <div className="usuario-page">
       <header className="header">
         <div className="header-content">
-          <div className="header-left">
+          <div className="header-left" onClick={() => window.location.href = "/Home"}>
             <img src="/img/logo-link.svg" alt="Logo" className="logo" />
           </div>
 
